@@ -158,3 +158,11 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+images/*
+function_simulate/heat_model/
+function_simulate/heat_model/__pycache__/
+__pycache__/
+private/*
+test.py
+*__init__.py
+
