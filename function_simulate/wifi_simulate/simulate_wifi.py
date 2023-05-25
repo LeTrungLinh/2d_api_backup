@@ -87,12 +87,16 @@ def data2heatmap(data, dynamicRange = 'linear'):
     # Bpy = np.array([.5, 1, 1, 0, 0, 0])
 
     ### color modify
-    Rpy = np.array([0.0,    0.3,     0.3,       0.4,     0.15,       0.0])
-    Gpy = np.array([0.28,  0.58,     1,       1,           0.99,      0.85])
-    Bpy = np.array([0.98,   1,     1,     0.1,            0.2,        0.0])
+    # Rpy = np.array([0.0,    0.3,     0.3,       0.4,     0.15,       0.0])
+    # Gpy = np.array([0.28,  0.58,     1,       1,           0.99,      0.85])
+    # Bpy = np.array([0.98,   1,     1,     0.1,            0.2,        0.0])
 
+    ## color modify 2
+    Bpy = (np.array([255,     255,          255,     238,            216,        152]))/255
+    Gpy = (np.array([129,     177,          235,     247,            255,        255]))/255
+    Rpy = (np.array([67,       76,          75,       68,             76,        72]))/255
+    print(Rpy)
     RGBmap3D = np.zeros((1, data.size, 3))
-
 
     for i in range(data.size):
         if data[i] <= Rpx[1]:
