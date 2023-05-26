@@ -112,7 +112,6 @@ async def simulate_wifi(request: Request, file: UploadFile = File(...), data: st
     
     
     data = json.loads(data)
-    print("letrunglinh",data)
     width = data["width"]
     height = data["length"]
     ghz = data["ghz"]

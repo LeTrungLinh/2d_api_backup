@@ -92,10 +92,9 @@ def data2heatmap(data, dynamicRange = 'linear'):
     # Bpy = np.array([0.98,   1,     1,     0.1,            0.2,        0.0])
 
     ## color modify 2
-    Bpy = (np.array([255,     255,          255,     238,            216,        152]))/255
-    Gpy = (np.array([129,     177,          235,     247,            255,        255]))/255
-    Rpy = (np.array([67,       76,          75,       68,             76,        72]))/255
-    print(Rpy)
+    Bpy = (np.array([255,     255,          255,     152,            152,        152]))/255
+    Gpy = (np.array([129,     177,          235,     255,            255,        255]))/255
+    Rpy = (np.array([67,       76,          75,       72,             72,        72]))/255
     RGBmap3D = np.zeros((1, data.size, 3))
 
     for i in range(data.size):
@@ -203,10 +202,10 @@ class multiWallModel:
         y -= 5 
         w += 10 
         h += 10
-        # x = max(x, 0)
-        # y = max(y, 0)
-        # w = min(w, width - x)
-        # h = min(h, height - y)
+        x = max(x, 0)
+        y = max(y, 0)
+        w = min(w, width - x)
+        h = min(h, height - y)
         
         # Extract the cut image
         cut_img = binary_img[y:y+h, x:x+w]
